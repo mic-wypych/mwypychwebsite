@@ -1,0 +1,120 @@
+/* ── Reset & base ──────────────────────────────────── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0d0a2e;
+    overflow: hidden;
+}
+
+/* ── Animated background canvas ────────────────────── */
+#bg-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* ── Card ───────────────────────────────────────────── */
+#card {
+    position: relative;
+    z-index: 1;
+    background: #13103a;
+    border: 2px solid #F46336;
+    border-radius: 4px;
+    width: 400px;
+
+    overflow: hidden;
+}
+
+/* Orange accent stripe at the top */
+#card-accent {
+    height: 8px;
+    background: #F46336;
+}
+
+#card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 28px 24px;
+    gap: 12px;
+}
+
+/* ── Profile photo ──────────────────────────────────── */
+#profile-photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 2px solid #F46336;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #1e1a4a;
+}
+
+#profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── Text ───────────────────────────────────────────── */
+#description {
+    text-align: center;
+}
+
+#description .name {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+}
+
+#description .subtitle {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #a89ec9;
+    margin-top: 4px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+/* ── Social links ───────────────────────────────────── */
+#social-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 8px;
+    padding-top: 16px;
+    border-top: 1px solid #2e2a5e;
+    width: 100%;
+    justify-content: center;
+}
+
+#social-links a {
+    color: #a89ec9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+#social-links a:hover {
+    color: #F46336;
+    transform: translateY(-3px);
+}
+
+#social-links svg {
+    width: 24px;
+    height: 24px;
+}
