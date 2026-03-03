@@ -3,7 +3,7 @@ const canvas = document.getElementById('bg-canvas');
 const ctx    = canvas.getContext('2d');
 
 const BG     = '#0d0a2e';
-const RADIUS = 320;
+const RADIUS = 600;
 
 let grainCache = null;
 let grainTick  = 0;
@@ -33,18 +33,19 @@ function draw() {
     ctx.fillStyle = BG;
     ctx.fillRect(0, 0, W, H);
 
-    const cx = W - RADIUS * 0.55;
-    const cy =     RADIUS * 0.05;
+    const cx = W - RADIUS * 0.7;
+    const cy = H - RADIUS * 0.25;
 
     ctx.save();
     ctx.beginPath();
     ctx.arc(cx, cy, RADIUS, 0, Math.PI * 2);
     ctx.clip();
 
+    // Fade from transparent at the top to solid orange at the bottom
     const grad = ctx.createLinearGradient(cx, cy - RADIUS, cx, cy + RADIUS);
-    grad.addColorStop(0,    'rgba(244, 99, 54, 1)');
-    grad.addColorStop(0.55, 'rgba(244, 99, 54, 0.45)');
     grad.addColorStop(1,    'rgba(244, 99, 54, 0)');
+    grad.addColorStop(0.45, 'rgba(244, 99, 54, 0.45)');
+    grad.addColorStop(0,    'rgba(244, 99, 54, 1)');
     ctx.fillStyle = grad;
     ctx.fillRect(cx - RADIUS, cy - RADIUS, RADIUS * 2, RADIUS * 2);
 
