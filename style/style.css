@@ -1,0 +1,267 @@
+/* ── Reset & base ──────────────────────────────────── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: #0d0a2e;
+    overflow-x: hidden;
+}
+
+/* ── Hero (first viewport) ──────────────────────────── */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 48px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ── Scroll hint ────────────────────────────────────── */
+#scroll-hint {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: #a89ec9;
+    opacity: 0.75;
+    animation: bounce 2s ease-in-out infinite;
+    transition: opacity 0.5s ease;
+}
+
+#scroll-hint.hidden {
+    opacity: 0 !important;
+    pointer-events: none;
+    animation: none;
+}
+
+#scroll-hint span {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+#scroll-hint svg {
+    width: 20px;
+    height: 20px;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%       { transform: translateX(-50%) translateY(6px); }
+}
+
+/* ── Content sections ───────────────────────────────── */
+#sections {
+    position: relative;
+    z-index: 1;
+    padding: 80px 48px 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: min(900px, calc(100vw - 96px));
+}
+
+.box {
+    border: 1px solid #2e2a5e;
+    background: rgba(19, 16, 58, 0.85);
+    border-radius: 4px;
+    padding: 56px 60px;
+}
+
+.box h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #F46336;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 20px;
+}
+
+.box p {
+    font-size: 1.1rem;
+    color: #a89ec9;
+    line-height: 1.75;
+}
+
+/* ── Portfolio section ──────────────────────────────── */
+#portfolio {
+    position: relative;
+    z-index: 1;
+    padding: 0 48px 100px;
+    max-width: min(1100px, calc(100vw - 96px));
+}
+
+#portfolio-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #F46336;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 32px;
+}
+
+#portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.project-card {
+    border: 1px solid #2e2a5e;
+    background: rgba(19, 16, 58, 0.85);
+    border-radius: 4px;
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.project-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #F46336;
+    opacity: 0.75;
+}
+
+.project-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #a89ec9;
+    line-height: 1.7;
+    flex: 1;
+}
+
+.project-link {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #F46336;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: opacity 0.2s ease;
+    align-self: flex-start;
+}
+
+.project-link:hover {
+    opacity: 0.7;
+}
+
+/* ── Footer ─────────────────────────────────────────── */
+#site-footer {
+    position: relative;
+    z-index: 1;
+    padding: 32px 48px;
+    border-top: 1px solid #2e2a5e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #4e4870;
+}
+
+/* ── Animated background canvas ────────────────────── */
+#bg-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* ── Card (no box — bare layout) ───────────────────── */
+#card {
+    position: relative;
+    z-index: 1;
+    margin-top: 80px;
+    margin-left: 60px;
+}
+
+#card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+/* ── Profile photo ──────────────────────────────────── */
+#profile-photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 2px solid #F46336;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #1e1a4a;
+}
+
+#profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── Text ───────────────────────────────────────────── */
+#description {
+    text-align: left;
+}
+
+#description .name {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #a89ec9;
+    letter-spacing: -0.02em;
+}
+
+#description .subtitle {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #a89ec9;
+    margin-top: 4px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+/* ── Social links ───────────────────────────────────── */
+#social-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 4px;
+    justify-content: flex-start;
+}
+
+#social-links a {
+    color: #a89ec9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+#social-links a:hover {
+    color: #F46336;
+    transform: translateY(-3px);
+}
+
+#social-links svg {
+    width: 24px;
+    height: 24px;
+}
