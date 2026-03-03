@@ -34,7 +34,9 @@ function draw() {
     ctx.fillRect(0, 0, W, H);
 
     const cx = W - RADIUS * 0.7;
-    const cy = H - RADIUS * 0.25;
+    // Parallax: circle drifts up at 30% of scroll speed,
+    // so it lags behind the content and feels deeper in the scene
+    const cy = H - RADIUS * 0.25 - window.scrollY * 0.3;
 
     ctx.save();
     ctx.beginPath();
@@ -72,3 +74,8 @@ function rebuild() {
 rebuild();
 window.addEventListener('resize', rebuild);
 requestAnimationFrame(draw);
+
+// Hide scroll hint on first scroll
+window.addEventListener('scroll', () => {
+    document.getElementById('scroll-hint').classList.add('hidden');
+}, { once: true });
