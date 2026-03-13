@@ -102,7 +102,7 @@ body {
 }
 
 #portfolio-heading {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: rgba(182, 34, 29, 1);
     text-transform: uppercase;
@@ -115,6 +115,29 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
+
+#blog {
+    position: relative;
+    z-index: 1;
+    padding: 0 48px 100px;
+    max-width: min(1100px, calc(100vw - 96px));
+}
+
+#blog-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgba(182, 34, 29, 1);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 32px;
+}
+
+#blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
 
 .project-card {
     border: 1px solid #2e2a5e;
