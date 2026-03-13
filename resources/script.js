@@ -47,7 +47,7 @@ function draw() {
     const grad = ctx.createLinearGradient(cx, cy - RADIUS, cx, cy + RADIUS);
     grad.addColorStop(1,    'rgba(244, 99, 54, 0)');
     grad.addColorStop(0.45, 'rgba(244, 99, 54, 0.45)');
-    grad.addColorStop(0,    'rgba(244, 60, 54, 1)');
+    grad.addColorStop(0,    'rgba(182, 34, 29, 1)');
     ctx.fillStyle = grad;
     ctx.fillRect(cx - RADIUS, cy - RADIUS, RADIUS * 2, RADIUS * 2);
 

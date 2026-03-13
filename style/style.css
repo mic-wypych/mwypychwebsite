@@ -81,7 +81,7 @@ body {
 .box h2 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: rgba(244, 60, 54, 1);
+    color: rgba(182, 34, 29, 1);
     text-transform: uppercase;
     letter-spacing: 0.08em;
     margin-bottom: 20px;
@@ -104,7 +104,7 @@ body {
 #portfolio-heading {
     font-size: 1.5rem;
     font-weight: 700;
-    color: rgba(244, 60, 54, 1);
+    color: rgba(182, 34, 29, 1);
     text-transform: uppercase;
     letter-spacing: 0.08em;
     margin-bottom: 32px;
@@ -131,7 +131,7 @@ body {
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: rgba(244, 60, 54, 1);
+    color: rgba(182, 34, 29, 1);
     opacity: 0.75;
 }
 
@@ -152,7 +152,7 @@ body {
 .project-link {
     font-size: 0.85rem;
     font-weight: 700;
-    color: rgba(244, 60, 54, 1);
+    color: rgba(182, 34, 29, 1);
     text-decoration: none;
     letter-spacing: 0.04em;
     transition: opacity 0.2s ease;
@@ -205,7 +205,7 @@ body {
     width: 110px;
     height: 110px;
     border-radius: 50%;
-    border: 2px solid rgba(244, 60, 54, 1);
+    border: 2px solid rgba(182, 34, 29, 1);
     overflow: hidden;
     flex-shrink: 0;
     background: #a29be9ff;
@@ -257,7 +257,7 @@ body {
 }
 
 #social-links a:hover {
-    color: rgba(244, 60, 54, 1);
+    color: rgba(182, 34, 29, 1);
     transform: translateY(-3px);
 }
 
