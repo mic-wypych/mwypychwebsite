@@ -2,7 +2,7 @@
 const canvas = document.getElementById('bg-canvas');
 const ctx    = canvas.getContext('2d');
 
-const BG     = '#0d0a2e';
+const BG     = '#a29be9ff';
 const RADIUS = 600;
 
 let grainCache = null;
@@ -47,7 +47,7 @@ function draw() {
     const grad = ctx.createLinearGradient(cx, cy - RADIUS, cx, cy + RADIUS);
     grad.addColorStop(1,    'rgba(244, 99, 54, 0)');
     grad.addColorStop(0.45, 'rgba(244, 99, 54, 0.45)');
-    grad.addColorStop(0,    'rgba(244, 99, 54, 1)');
+    grad.addColorStop(0,    'rgba(244, 60, 54, 1)');
     ctx.fillStyle = grad;
     ctx.fillRect(cx - RADIUS, cy - RADIUS, RADIUS * 2, RADIUS * 2);
 
